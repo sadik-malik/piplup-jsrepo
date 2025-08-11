@@ -19,7 +19,8 @@
     "prettier": "pretty-quick --ignore-path .lintignore",
     "prettier:all": "prettier --write . --ignore-path .lintignore",
     "typescript": "tsc -p tsconfig.json",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "tcm": "tcm src"
   },
   "keywords": [],
   "author": "Sadik Malik",
@@ -33,6 +34,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@piplup/code-infra": "^1.0.1",
     "@types/node": "^24.2.1",
     "@types/react": "^19.0.0",
@@ -56,9 +59,8 @@
     "postcss-safe-parser": "^7.0.1",
     "prettier": "^3.6.2",
     "pretty-quick": "^4.2.2",
+    "typed-css-modules": "^0.9.1",
     "typescript": "^5.9.2",
-    "vite": "^7.1.1",
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1"
+    "vite": "^7.1.1"
   }
 }
