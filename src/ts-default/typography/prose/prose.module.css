@@ -104,5 +104,5 @@
 
 
 .root--noMaxWidth {
-  max-width: none !important;
+  max-width: none;
 }
