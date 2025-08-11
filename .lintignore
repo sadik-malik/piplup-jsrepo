@@ -1,0 +1,8 @@
+.cache
+/.git
+node_modules
+build
+dist
+pnpm-lock.yaml
+
+__fixtures__
