@@ -16,6 +16,22 @@ The collection for highly customizable react components.
 
 piplup-jsrepo uses [jsrepo](https://jsrepo.dev) for installing components via CLI.
 
+## Components
+
+### FadeContent
+FadeContent animates its children into view when they enter the viewport, with optional blur and delay effects. Useful for scroll-based reveal animations in React apps.
+
+```bash
+npx jsrepo add https://jsrepo.piplupjs.com/ts/default/animations/fade-content
+```
+
+### Prose
+Renders a typography container with optional styling for prose content.
+
+```bash
+npx jsrepo add https://jsrepo.piplupjs.com/ts/default/typography/prose
+```
+
 ## How To Contribute?
 
 Contributions are welcome! Check the [Open Issues](https://github.com/sadik-malik/piplup-jsrepo/issues) to see how you can help.
