@@ -1,0 +1,52 @@
+@property --pip-fade-content-duration {
+  syntax: '<time>';
+  inherits: true;
+  initial-value: 1000ms;
+}
+@property --pip-fade-content-easing {
+  syntax: '<easing-function>';
+  inherits: true;
+  initial-value: ease-out;
+}
+@property --pip-fade-content-initial-opacity {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+@property --pip-fade-content-visible-opacity {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
+}
+@property --pip-fade-content-blur-initial {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 10px;
+}
+@property --pip-fade-content-blur-visible {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@layer pip {
+  .root {
+    filter: none;
+    opacity: var(--pip-fade-content-initial-opacity);
+    transition:
+      opacity var(--pip-fade-content-duration) var(--pip-fade-content-easing),
+      filter var(--pip-fade-content-duration) var(--pip-fade-content-easing);
+  }
+
+  .root--visible {
+    opacity: var(--pip-fade-content-visible-opacity);
+  }
+
+  .root.blur {
+    filter: blur(var(--pip-fade-content-blur-initial));
+  }
+
+  .root--visible.blur {
+    filter: blur(var(--pip-fade-content-blur-visible));
+  }
+}
