@@ -9,6 +9,12 @@ export interface QueryClientProviderProps {
   children: React.ReactNode;
 }
 
+
+/**
+ * QueryClientProvider provides the @tanstack/react-query client context
+ * to its children, enabling data fetching and caching throughout the component tree.
+ * It also includes React Query Devtools for debugging query state in development.
+ */
 export default function QueryClientProvider(props: QueryClientProviderProps) {
   const { children } = props;
   const queryClient = getQueryClient();
