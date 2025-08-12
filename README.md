@@ -18,14 +18,27 @@ piplup-jsrepo uses [jsrepo](https://jsrepo.dev) for installing components via CL
 
 ## Components
 
-### FadeContent
+### Animations
+
+#### FadeContent
 FadeContent animates its children into view when they enter the viewport, with optional blur and delay effects. Useful for scroll-based reveal animations in React apps.
 
 ```bash
 npx jsrepo add https://jsrepo.piplupjs.com/ts/default/animations/fade-content
 ```
 
-### Prose
+### Seo
+
+#### JsonLD
+JsonLD renders structured data as a script tag for SEO, using schema.org JSON-LD format. Useful for adding rich metadata to your React pages for search engines.
+
+```bash
+npx jsrepo add https://jsrepo.piplupjs.com/ts/default/seo/json-ld
+```
+
+### Typography
+
+#### Prose
 Renders a typography container with optional styling for prose content.
 
 ```bash
