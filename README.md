@@ -54,6 +54,21 @@ Renders a typography container with optional styling for prose content.
 npx jsrepo add https://jsrepo.piplupjs.com/ts/default/typography/prose
 ```
 
+## Responsive Design
+
+piplup-jsrepo components use a set of default breakpoints for responsive design similar to [tailwindcss](https://tailwindcss.com/docs/responsive-design):
+
+| Name    | Min Width         |
+|---------|-------------------|
+| xs      | 0px               |
+| sm      | 40rem (640px)     |
+| md      | 48rem (768px)     |
+| lg      | 64rem (1024px)    |
+| xl      | 80rem (1280px)    |
+| 2xl     | 96rem (1536px)    |
+
+You can customize these breakpoints as needed in your project.
+
 ## How To Contribute?
 
 Contributions are welcome! Check the [Open Issues](https://github.com/sadik-malik/piplup-jsrepo/issues) to see how you can help.
