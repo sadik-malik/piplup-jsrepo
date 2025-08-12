@@ -1,0 +1,77 @@
+
+:root {
+	--pip-bg-dark: oklch(21% 0.05 270);
+	--pip-bg-accent: oklch(40% 0.13 282);
+	--pip-bg-gradient: linear-gradient(135deg, var(--pip-bg-dark) 60%, var(--pip-bg-accent) 100%);
+	--pip-title: oklch(100% 0 0);
+	--pip-title-shadow: oklch(40% 0.13 282 / 0.27);
+	--pip-desc: oklch(82% 0.07 282);
+	--pip-btn-bg:  oklch(62% 0.19 282);
+	--pip-btn-bg-hover:  oklch(62% 0.19 282);
+	--pip-btn-text: oklch(100% 0 0);
+	--pip-btn-shadow: oklch(40% 0.13 282 / 0.2);
+	--pip-btn-shadow-hover: oklch(40% 0.13 282 / 0.33);
+	--pip-btn-shadow-hover-strong: oklch(40% 0.13 282 / 0.45);
+}
+
+
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--pip-bg-gradient);
+	padding: 0 1.5rem;
+}
+
+
+
+.title {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	letter-spacing: 0.01em;
+	color: var(--pip-title);
+	text-shadow: 0 2px 16px var(--pip-title-shadow);
+	text-align: center;
+  vertical-align: middle;
+}
+
+.title mark {
+  color: oklch(0% 0 0);
+	background: oklch(90% 0.2 100);
+  font-weight: 500;
+  padding: 0.1em 0.2em;
+  vertical-align: middle;
+}
+
+
+.desc {
+	font-size: 1.25rem;
+	margin-bottom: 2.5rem;
+	color: var(--pip-desc);
+	text-align: center;
+	max-width: 46rem;
+  line-height: normal;
+}
+
+.github {
+	display: inline-block;
+	padding: 0.85em 2.2em;
+	background: var(--pip-btn-bg);
+	color: var(--pip-btn-text);
+	border-radius: 0.6em;
+	font-size: 1.15rem;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 2px 16px 0 var(--pip-btn-shadow);
+	transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+	margin-top: 0.5rem;
+}
+.github:hover,
+.github:focus {
+	background: var(--pip-btn-bg-hover);
+	transform: translateY(-2px) scale(1.04);
+	box-shadow: 0 6px 24px 0 var(--pip-btn-shadow-hover-strong);
+}
