@@ -35,7 +35,9 @@ JsonLD renders structured data as a script tag for SEO, using schema.org JSON-LD
 ```bash
 npx jsrepo add https://jsrepo.piplupjs.com/ts/default/seo/json-ld
 ```
-### Tanstack Query
+### Data Fetching
+
+#### Tanstack Query
 Ready to use @tanstack/react-query components, enabling powerful data fetching, caching, and synchronization features.
 
 ```bash
