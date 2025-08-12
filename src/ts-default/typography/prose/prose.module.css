@@ -1,34 +1,34 @@
-@property --prose-text {
+@property --pip-prose-text {
   syntax: '<color>';
   inherits: true;
   initial-value: oklch(0.21 0 0);
 }
-@property --prose-link {
+@property --pip-prose-link {
   syntax: '<color>';
   inherits: true;
   initial-value: oklch(0.65 0.19 264.8);
 }
-@property --prose-blockquote-border {
+@property --pip-prose-blockquote-border {
   syntax: '<color>';
   inherits: true;
   initial-value: oklch(0.92 0 0);
 }
-@property --prose-blockquote-text {
+@property --pip-prose-blockquote-text {
   syntax: '<color>';
   inherits: true;
   initial-value: oklch(0.54 0 0);
 }
-@property --prose-code-bg {
+@property --pip-prose-code-bg {
   syntax: '<color>';
   inherits: true;
   initial-value: oklch(0.96 0 0);
 }
-@property --prose-code-text {
+@property --pip-prose-code-text {
   syntax: '<color>';
   inherits: true;
   initial-value: oklch(0.21 0 0);
 }
-@property --prose-spacing {
+@property --pip-prose-spacing {
   syntax: '<length>';
   inherits: true;
   initial-value: 1.25em;
@@ -36,17 +36,17 @@
 
 @layer pip {
   [data-theme='dark'] .root {
-    --prose-text: oklch(0.92 0 0);
-    --prose-link: oklch(0.85 0.19 264.8);
-    --prose-blockquote-border: oklch(0.32 0 0);
-    --prose-blockquote-text: oklch(0.72 0 0);
-    --prose-code-bg: oklch(0.21 0 0);
-    --prose-code-text: oklch(0.96 0 0);
-    --prose-spacing: 1.25em;
+    --pip-prose-text: oklch(0.92 0 0);
+    --pip-prose-link: oklch(0.85 0.19 264.8);
+    --pip-prose-blockquote-border: oklch(0.32 0 0);
+    --pip-prose-blockquote-text: oklch(0.72 0 0);
+    --pip-prose-code-bg: oklch(0.21 0 0);
+    --pip-prose-code-text: oklch(0.96 0 0);
+    --pip-prose-spacing: 1.25em;
   }
 
   .root {
-    color: var(--prose-text);
+    color: var(--pip-prose-text);
     max-width: 65ch;
     font-size: 1rem;
     line-height: 1.75;
@@ -55,62 +55,62 @@
   .root h1 {
     font-size: 2.25rem;
     margin-top: 0;
-    margin-bottom: calc(var(--prose-spacing) * 0.71);
+    margin-bottom: calc(var(--pip-prose-spacing) * 0.71);
     font-weight: 700;
   }
   .root h2 {
     font-size: 1.5rem;
-    margin-top: calc(var(--prose-spacing) * 1.6);
-    margin-bottom: var(--prose-spacing);
+    margin-top: calc(var(--pip-prose-spacing) * 1.6);
+    margin-bottom: var(--pip-prose-spacing);
     font-weight: 600;
   }
   .root h3 {
     font-size: 1.25rem;
-    margin-top: calc(var(--prose-spacing) * 1.28);
-    margin-bottom: calc(var(--prose-spacing) * 0.48);
+    margin-top: calc(var(--pip-prose-spacing) * 1.28);
+    margin-bottom: calc(var(--pip-prose-spacing) * 0.48);
     font-weight: 600;
   }
   .root a {
-    color: var(--prose-link);
+    color: var(--pip-prose-link);
     text-decoration: underline;
     word-break: break-word;
   }
   .root ol {
-    margin-top: var(--prose-spacing);
-    margin-bottom: var(--prose-spacing);
+    margin-top: var(--pip-prose-spacing);
+    margin-bottom: var(--pip-prose-spacing);
     padding-left: 1.5em;
   }
   .root li {
-    margin-top: calc(var(--prose-spacing) * 0.4);
-    margin-bottom: calc(var(--prose-spacing) * 0.4);
+    margin-top: calc(var(--pip-prose-spacing) * 0.4);
+    margin-bottom: calc(var(--pip-prose-spacing) * 0.4);
   }
 
   .root strong {
     font-weight: 600;
   }
   .root blockquote {
-    border-left: 4px solid var(--prose-blockquote-border);
+    border-left: 4px solid var(--pip-prose-blockquote-border);
     padding-left: 1em;
-    color: var(--prose-blockquote-text);
+    color: var(--pip-prose-blockquote-text);
     font-style: italic;
-    margin: calc(var(--prose-spacing) * 1.2) 0;
+    margin: calc(var(--pip-prose-spacing) * 1.2) 0;
   }
   .root img {
     max-width: 100%;
     border-radius: 0.5em;
-    margin: calc(var(--prose-spacing) * 1.2) 0;
+    margin: calc(var(--pip-prose-spacing) * 1.2) 0;
   }
   .root pre {
-    background: var(--prose-code-bg);
-    color: var(--prose-code-text);
+    background: var(--pip-prose-code-bg);
+    color: var(--pip-prose-code-text);
     padding: 1em;
     border-radius: 0.5em;
     overflow-x: auto;
-    margin: calc(var(--prose-spacing) * 1.2) 0;
+    margin: calc(var(--pip-prose-spacing) * 1.2) 0;
   }
   .root code {
-    background: var(--prose-code-bg);
-    color: var(--prose-code-text);
+    background: var(--pip-prose-code-bg);
+    color: var(--pip-prose-code-text);
     padding: 0.2em 0.4em;
     border-radius: 0.3em;
     font-size: 0.95em;
