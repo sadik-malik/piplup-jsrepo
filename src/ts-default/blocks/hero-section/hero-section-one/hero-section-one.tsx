@@ -53,11 +53,6 @@ function Image(
 
   const Comp = asChild ? Slot : 'img';
 
-  const context = React.useContext(SectionContext);
-  if (!context) {
-    throw new Error('HeroSectionOne.Image must be used within HeroSectionOne.Root');
-  }
-
   return (
     <Comp
       alt={alt}
