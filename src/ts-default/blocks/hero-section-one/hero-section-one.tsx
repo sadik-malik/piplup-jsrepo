@@ -3,44 +3,24 @@ import { Slot } from '@radix-ui/react-slot';
 import clsx from 'clsx';
 import styles from './hero-section-one.module.css';
 
-const SectionContext = React.createContext<null | {
-  description?: React.ReactNode;
-  title: React.ReactNode;
-}>(null);
-
 function Root(
   props: React.ComponentProps<'section'> & {
     asChild?: boolean;
-    description?: React.ReactNode;
-    title?: React.ReactNode;
   },
 ) {
-  const { asChild, children, className, description, title, ...rest } = props;
+  const { asChild, children, className, ...rest } = props;
   const Comp = asChild ? Slot : 'section';
 
-  const contextValue = React.useMemo<{
-    description?: React.ReactNode;
-    title: React.ReactNode;
-  }>(
-    () => ({
-      description,
-      title,
-    }),
-    [title, description],
-  );
   return (
-    <SectionContext.Provider value={contextValue}>
-      <Comp
-        aria-label={typeof title === 'string' ? title : 'Hero section'}
-        className={clsx(styles.root, className)}
-        itemType="https://schema.org/WPHeader"
-        role="banner"
-        itemScope
-        {...rest}
-      >
-        {children}
-      </Comp>
-    </SectionContext.Provider>
+    <Comp
+      className={clsx(styles.root, className)}
+      itemType="https://schema.org/WPHeader"
+      role="banner"
+      itemScope
+      {...rest}
+    >
+      {children}
+    </Comp>
   );
 }
 
@@ -100,14 +80,9 @@ function Title(
 
   const Comp = asChild ? Slot : 'h1';
 
-  const context = React.useContext(SectionContext);
-  if (!context) {
-    throw new Error('HeroSectionOne.Title must be used within HeroSectionOne.Root');
-  }
-
   return (
     <Comp className={clsx(styles.title, className)} itemProp="headline" {...rest}>
-      {props.children || context?.title}
+      {props.children}
     </Comp>
   );
 }
@@ -121,14 +96,9 @@ function Description(
 
   const Comp = asChild ? Slot : 'p';
 
-  const context = React.useContext(SectionContext);
-  if (!context) {
-    throw new Error('HeroSectionOne.Description must be used within HeroSectionOne.Root');
-  }
-
   return (
     <Comp className={clsx(styles.description, className)} itemProp="description" {...rest}>
-      {props.children || context?.description}
+      {props.children}
     </Comp>
   );
 }
