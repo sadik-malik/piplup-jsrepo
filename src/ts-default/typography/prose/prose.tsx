@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import clsx from 'clsx';
-import classes from './prose.module.css';
+import styles from './prose.module.css';
 
 export interface ProseProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
@@ -43,9 +43,9 @@ export default function Prose(props: ProseProps): React.JSX.Element {
   return (
     <Comp
       className={clsx({
-        [classes.root]: enableProse,
-        [classes['root--container']]: enableContainer,
-        [classes['root--noMaxWidth']]: disableMaxWidth,
+        [styles.root]: enableProse,
+        [styles['root--container']]: enableContainer,
+        [styles['root--noMaxWidth']]: disableMaxWidth,
       })}
       {...rest}
     />

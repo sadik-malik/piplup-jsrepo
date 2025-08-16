@@ -44,6 +44,15 @@ Ready to use @tanstack/react-query components, enabling powerful data fetching, 
 npx jsrepo add https://jsrepo.piplupjs.com/ts/default/data-fetching/tanstack-query
 ```
 
+### Layout
+
+#### Masonry
+Masonry provides a responsive, gapless grid layout for React components, similar to Pinterest's layout style. It automatically arranges child elements into optimal positions based on available vertical space, making it ideal for image galleries, cards, or any content that benefits from a dynamic, flowing grid. This component uses a polyfill to enable a native CSS masonry-based layout, ensuring broad browser compatibility.
+
+```bash
+npx jsrepo add https://jsrepo.piplupjs.com/ts/default/layout/masonry
+```
+
 
 ### Typography
 

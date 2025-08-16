@@ -3,7 +3,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
 import { Slot } from '@radix-ui/react-slot';
-import classes from './fade-content.module.css';
+import styles from './fade-content.module.css';
 
 export interface FadeContentProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
@@ -76,10 +76,10 @@ function FadeContent(props: FadeContentProps) {
     <Comp
       {...rest}
       className={clsx(
-        classes.root,
+        styles.root,
         {
-          [classes.blur]: blur,
-          [classes['root--visible']]: inView,
+          [styles.blur]: blur,
+          [styles['root--visible']]: inView,
         },
         className,
       )}

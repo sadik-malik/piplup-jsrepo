@@ -1,0 +1,25 @@
+@property --pip-masonry-columns {
+  syntax: '<number> <number> <number>';
+  inherits: true;
+}
+
+@property --pip-masonry-rows {
+  syntax: '<number> <number>';
+  inherits: true;
+}
+
+@property --pip-masonry-gap {
+  syntax: '<length> <length>';
+  inherits: true;
+}
+
+@layer pip {
+  .root {
+    display: grid;
+    align-items: start;
+    justify-content: start;
+    grid-template-columns: var(--pip-masonry-columns);
+    grid-template-rows: var(--pip-masonry-rows);
+    gap: var(--pip-masonry-gap);
+  }
+}
